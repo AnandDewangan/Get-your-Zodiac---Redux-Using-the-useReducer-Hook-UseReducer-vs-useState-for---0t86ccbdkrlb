@@ -1,11 +1,5 @@
-//code here
-import zodiacSlice from './slices/zodiacSlice';
-const {configureStore} = require('@reduxjs/toolkit');
+import { createStore } from "redux"
+import rootReducer from "../src/reducers/index"
+const store=createStore(rootReducer)
 
-const store = configureStore({
-    reducer:{
-        tellZodiac: zodiacSlice
-    }
-})
-
-export default store;
+export default store
